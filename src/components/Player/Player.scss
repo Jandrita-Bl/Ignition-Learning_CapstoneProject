@@ -1,0 +1,167 @@
+@use "../../styles/partials/mixins" as *;
+// @use "../../styles/partials/typography" as *;
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+
+.next-video {
+
+
+     @include desktop {
+          width: 500px;
+          position: absolute;
+          right: 4%;
+          top: 80%;
+      }
+
+    
+
+     &__item {
+          max-width: 500px;
+     }
+ 
+     &__header {
+         margin: 0.6rem;
+         padding-left:2rem;
+     }
+ 
+     &__subheader {
+         color: black;
+         margin: 0rem;
+         padding: 0.5rem;
+         font-size: 0.9rem;
+     }
+ 
+     &__IMG {
+         width: 150px;
+         height: 100px;
+     }
+ 
+     &__box {
+         height: auto;
+         display: flex;
+         margin-bottom: 1rem;
+     }
+ 
+     &__container {
+         height: 100px;
+         width: 200px;
+     }
+ 
+     &__txt {
+         margin: 0px;
+         font-size: 0.8rem;
+         margin-left: 0.5rem;
+     }
+ }
+ 
+ // brainflix
+ 
+ .Header {
+     height: 20vh;
+ 
+     &__Logo {
+         background-color: #bc32ce;
+         width: 100%;
+         height: 33%;
+     }
+ 
+     &__Search {
+         background-color: #bc32ce;
+         width: 100%;
+         height: 33%;
+     }
+ 
+     &__Upload {
+         background-color: #af48bc;
+         width: 100%;
+         height: 33%;
+     }
+ 
+     &__IMG {
+         width: 35%;
+     }
+ }
+ 
+ .Video {
+     background-color: lightyellow;
+    
+ 
+     &__Player {
+         width: 100%;
+         height: 20vh;
+
+       
+     }
+ 
+     &__Bar {
+         background-color: gray;
+         height: 2%;
+     }
+
+ 
+ }
+ 
+
+
+
+
+
+.article__Text {
+
+    margin-left: 10%;
+    width:90%;
+}
+
+.selected-video {
+
+    margin-left: 10%;
+
+
+    &__Section--2 {
+
+        width: 80%;
+     
+      
+    }
+
+
+    &__Video {
+
+        width: 100%;
+        height: 20vh;
+        background-color: rgb(6, 5, 5);
+       
+
+        @include desktop {
+            height:40vh;
+         }
+
+    }
+
+
+
+}
+
+
+.comments {
+
+
+
+&__avatarIMG {
+    height: 30px;
+    width:32px;
+    border-radius: 50%;
+}
+
+}

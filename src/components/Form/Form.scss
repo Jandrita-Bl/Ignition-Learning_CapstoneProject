@@ -1,0 +1,212 @@
+
+@use "../../styles/partials/mixins" as *;
+// @use "../../styles/partials/typography" as *;
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+h6 {
+     color: rgb(177, 175, 175);
+ }
+ 
+
+.Container {
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.UploadHP {
+
+ 
+
+    &__Thumbnail{
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-bottom: 1rem;
+       
+    
+    }
+
+    
+    &__Video {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    &__Title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        padding-left: 2rem;
+    }
+}
+
+ .comments {
+     display: flex;
+     justify-content: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ 
+     @include desktop {
+         display: flex;
+         justify-content: center;
+         width: 55%;
+     }
+ 
+     &__header {
+         margin-top: 2rem;
+         margin-left: 12%;
+         margin-bottom: 1rem;
+     }
+ 
+     &__section {
+         margin-left: 1rem;
+         margin-right: 2rem;
+         margin-bottom: 1.8rem;
+         padding-bottom: 1rem;
+         border-bottom: 1.5px solid rgb(208, 205, 205);
+         display: flex;
+         justify-content: center;
+ 
+       
+     }
+ 
+     &__section2 {
+         margin-left: 1rem;
+         margin-right: 2rem;
+         margin-bottom: 1rem;
+         padding-bottom: 1rem;
+         border-bottom: 1.5px solid rgb(208, 205, 205);
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+     
+ 
+         @include desktop {
+             align-self: center;
+             
+         }
+     }
+ 
+     &__box {
+         margin-bottom: 1rem;
+     }
+ 
+     &__Title {
+         margin: 1rem;
+     }
+ 
+    
+ 
+     &__userimg {
+         padding-top: 4.7rem;
+         margin-left: 15%;
+    
+     }
+ 
+     &__userimg2 {
+        
+         margin-left: 15%;
+       
+     }
+ 
+     &__avatarimg {
+        
+         height: 40px;
+         object-fit: cover;
+         margin-right: 1rem;
+     }
+ 
+     &__form {
+         display: flex;
+         flex-direction: column;
+         width: 90%;
+         margin-right: 5%;
+         margin-left: 5%;
+ 
+         @include desktop {
+             min-width: 60vw;
+         }
+     }
+ 
+     &__input {
+         width: 100%;
+         background-color: #fafafa;
+     }
+ 
+     &__textarea {
+         background-color: #fafafa;
+
+         &-desc{
+            height: 5rem;
+         }
+        
+     }
+ 
+     &__btn {
+         margin-top: 1rem;
+         background-color: #fdcb0b;
+         color: rgb(222, 94, 9);
+         border-radius: 6px;
+         height: 40px;
+         // width: 90%;
+         font-size: 16px;
+ 
+         @include tablet {
+             width: 250px;
+             align-self: flex-end;
+         }
+
+         &-cancel {
+            background-color: white;
+            color: #fdcb0b;
+            border: none;
+         }
+
+     }
+ 
+     &__item {
+         display: flex;
+         flex-direction: column;
+         max-width: 93.4%;
+         margin-left: 15%;
+         margin-right: 11%;
+         margin-bottom: 0.1rem;
+         border-bottom: 1.5px solid rgb(208, 205, 205);
+ 
+         @include desktop {
+             // max-width: 60%;
+             margin-left: 25%;
+             margin-right: 25%;
+         }
+     }
+ 
+     &__subheader {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         margin-bottom: 1rem;
+         margin-top: 1rem;
+     }
+ 
+     &__name {
+         &--text {
+             font-weight: 600;
+         }
+     }
+ 
+     &__date {
+         &--text {
+             color: rgb(177, 175, 175);
+             font-weight: 100;
+         }
+     }
+ 
+    
+ }
