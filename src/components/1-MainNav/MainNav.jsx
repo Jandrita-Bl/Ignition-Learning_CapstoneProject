@@ -24,9 +24,7 @@ function MainNav (){
          
       </div>
 
-      <div className="nav__list">
-          <img className="nav__img nav__img--1" src={Avatar} alt="" />
-      </div>         
+       
 
       <div className="nav__block  nav__block--1">
            <div className="nav__item nav__item--upload">
@@ -60,7 +58,7 @@ function MainNav (){
               </NavLink>
           </div>
 
-          <img className="nav__img nav__img--2" src={Avatar} alt="" />
+        
       </div>
 
   
