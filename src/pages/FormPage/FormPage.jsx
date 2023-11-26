@@ -1,16 +1,17 @@
-import "./UploadPage.scss";
+// import "./UploadPage.scss";
 
-import MainNav from "../../components/MainNav/MainNav";
-import FormWithOnSubmit from "../../components/Form/Form";
+import MainNav from "../../components/1-MainNav/MainNav";
+import Form from "../../components/Form/Form";
 
-function UploadPageJSX() {
+
+function FormPageJSX() {
     return (
         <div className="UploadHP">
             <MainNav />
 
-            <FormWithOnSubmit />
+            <Form />
         </div>
     );
 }
 
-export default UploadPageJSX;
+export default FormPageJSX;

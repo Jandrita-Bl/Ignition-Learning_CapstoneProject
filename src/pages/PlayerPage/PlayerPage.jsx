@@ -1,16 +1,21 @@
 import "./PlayerPage.scss";
 
-import MainNav from "../../components/MainNav/MainNav";
-import FormWithOnSubmit from "../../components/Form/Form";
+import MainNav from "../../components/1-MainNav/MainNav";
+import Player from "../../components/4-Player/Player";
 
-function UploadPageJSX() {
+
+
+function PlayerPageJSX() {
     return (
         <div className="UploadHP">
             <MainNav />
 
-            <FormWithOnSubmit />
+            <Player />
+
+           
+
         </div>
     );
 }
 
-export default UploadPageJSX;
+export default PlayerPageJSX;

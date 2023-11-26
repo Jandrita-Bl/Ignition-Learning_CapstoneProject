@@ -1,9 +1,9 @@
-import "./HomePage.scss";
+import "./AssessmentPage.scss";
 
 import MainNav from "../../components/1-MainNav/MainNav";
 
 
-function HomePageJSX() {
+function AssessmentPageJSX() {
     return (
         <div className="home">
             <MainNav />
@@ -17,4 +17,4 @@ function HomePageJSX() {
     );
 }
 
-export default HomePageJSX;
+export default AssessmentPageJSX;

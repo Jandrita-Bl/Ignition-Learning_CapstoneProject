@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 
-function FormWithOnSubmit () { 
+function Form () { 
 
      const navigate = useNavigate();
     
@@ -47,8 +47,8 @@ function FormWithOnSubmit () {
      console.log("Response Data:", response.data);
 
 
-      alert("Video uploaded!", response.data);
-      navigate("/home");
+      alert("Course uploaded!", response.data);
+      navigate("/player");
     } catch (err) {
       alert("Something went wrong, try again", );
      
@@ -141,4 +141,4 @@ return (
 };
 
 
-export default FormWithOnSubmit
+export default Form

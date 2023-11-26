@@ -1,6 +1,6 @@
 
 import "./Player.scss";
-// import AvatarImg from "../../assets/Images/Mohan-muruge.jpg";
+
 
 
 import axios from "axios";
@@ -13,7 +13,7 @@ import { Link, useParams } from "react-router-dom";
 
 
 
-function VideoPlayer () {
+function Player () {
     const [videos, setVideos] = useState([]);
     const [selectedVideo, setSelectedVideo] = useState({});
 
@@ -84,8 +84,8 @@ function VideoPlayer () {
      // console.log("props", props);
 
 return  (
-<div>
-     <section className="selected-video">
+<div className="selected-video">
+     <section className="selected-video__outerbox">
                 <div className="selected-video__Section selected-video__Section--2">
                     <video
                         className="selected-video__Video"
@@ -231,7 +231,7 @@ return  (
                          .map((video) => {
                          return (
                          <li key={video.id} className="next-video__item">
-                              <Link to={`/videoplayer/${video.id}`}>
+                              <Link to={`/player/${video.id}`}>
 
                               <div className="next-video__box">
                          <img
@@ -265,7 +265,7 @@ return  (
 );
                     }
 
-export default VideoPlayer;
+export default Player;
 
           
 

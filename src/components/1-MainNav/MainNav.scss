@@ -1,6 +1,6 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
-// @use "../../styles/partials/typography" as *;
+@use "../../styles/partials/typography" as *;
 
 * {
     box-sizing: border-box;
@@ -39,6 +39,7 @@
     &__box {
         display: flex;
         justify-content: center;
+        align-items: center;
        
         height: 4.5rem;
         width: 100%;
@@ -59,17 +60,28 @@
         color: white;
         font-size: 1.6rem;
         font-weight: 100;
-        margin-top: 2rem;
+        
+        width: 170px;
+
+        @include tablet {
+            margin-left: 2rem;
+            margin-top: 0.5rem;
+
+        }
+        
     }
 
     &__list {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        padding-left: 2rem;
         height: 2.5rem;
 
         @include tablet {
-            margin-left: 40vw;
+            margin-left: 5vw;
+            padding-left: 0.5rem;
+
         }
     }
 
@@ -92,6 +104,8 @@
 
             @include tablet {
                 padding-top: 1.6rem;
+                margin-right: 0.5rem;
+
             }
         }
 
@@ -99,7 +113,7 @@
             height: 2rem;
 
             @include tablet {
-                width: 60%;
+                width: 50%;
             }
         }
     }
@@ -108,6 +122,20 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+
+        margin-bottom: 1rem;
+
+        @include tablet {
+
+        }
+
+
+        &__--1{
+            @include tablet {
+                justify-content:flex-start;
+               
+            }
+        }
 
     }
 
@@ -119,9 +147,10 @@
 
 
     &__img {
-        height: 30px;
-        width:32px;
+        height: 40px;
+        width:42px;
         border-radius: 50%;
+        border: 2px solid orange;
 
         &--1 {
 
@@ -138,13 +167,14 @@
              @include tablet {
                 display: flex;
                 margin-top: 1.5rem;
+                margin-right: 2rem;
              }
             
         }
     }
 
 &__input {
-    width: 100%;
+    width: 105%;
 }
 
 
@@ -159,7 +189,7 @@
     display: inline-block;
     border-radius: 3px;
     font-size: 0.5rem;
-     width:100%;
+    width:100%;
   
      @include tablet {
       min-width: 110px;
