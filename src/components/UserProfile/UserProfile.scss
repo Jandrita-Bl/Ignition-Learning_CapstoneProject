@@ -2,3 +2,15 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
+.results-container{
+
+     display: flex;
+     flex-direction: column;
+
+     @include tablet {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+     }
+}
+

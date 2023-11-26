@@ -10,7 +10,7 @@ function HomePageJSX() {
 
             <div className="home__hero"></div>
 
-            <div className="home__types"> </div>
+            <div className="home__types"> Sliding Text </div>
 
             
         </div>

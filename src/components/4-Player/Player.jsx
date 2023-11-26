@@ -1,30 +1,12 @@
-
 import "./Player.scss";
-
-
-
-
 import axios from "axios";
-
 import { useState, useEffect } from "react";
-
 import { Link, useParams } from "react-router-dom";
-
-
-
-
 
 function Player () {
     const [videos, setVideos] = useState([]);
     const [selectedVideo, setSelectedVideo] = useState({});
-
-
-
     const params = useParams();
-//     const {id} = useParams();
-//     console.log("params" , params.id);
-   
-   
 
     useEffect(() => {
         async function fetchVideos() {
@@ -33,17 +15,7 @@ function Player () {
                 "http://localhost:8080/videos/"
             );
 
-            // console.log("video data", response.data);
-
             setVideos(response.data);
-
-
-
-            // console.log(videos);
-
-          //   console.log(SelectedVideo.data);
-
-
         }
         fetchVideos();
     },[]);
@@ -53,16 +25,12 @@ function Player () {
      async function fetchVideo () {
 
           if (!params.id) {
-
-
                const response = await axios.get(
                 "http://localhost:8080/videos/"
                );
 
-
                const selectedResponse = await axios.get(`http://localhost:8080/videos/${response.data[0].id}`);
-   
-         
+
                setSelectedVideo(selectedResponse.data);
 
    
@@ -82,7 +50,6 @@ function Player () {
 
 
 
-     // console.log("props", props);
 
 return  (
 <div className="selected-video">

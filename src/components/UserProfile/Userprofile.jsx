@@ -17,35 +17,24 @@ function UserProfile (){
       }, []);
 
 
-      return <div className="nav"> 
+      return <div className="results"> 
         
- <nav className="nav__wrapper">
+ <nav className="results__wrapper">
 
 
 
-      <div className="nav__list">
-          <img className="nav__img nav__img--1" src={Avatar} alt="" />
+      <div className="results__list">
+          <img className="results__img" src={"Avatar"} alt="" />
       </div>         
 
          <div className="results-container">
-                    <ResultCircle percentage={percentages.A} color="#ff6384" label="Reading/Writing" />
-                    <ResultCircle percentage={percentages.B} color="#36a2eb" label="Visual" />
-                    <ResultCircle percentage={percentages.C} color="#ffcd56" label="Auditory" />
-                    <ResultCircle percentage={percentages.D} color="#4bc0c0" label="Kinesthetic" />
-          </div>
-
-
-
-      <div className="nav__block  nav__block--1">
-
-    
-           <div className="nav__item nav__item--upload">
-              <NavLink to="/assessment" >
-                  <button className="nav__up-button">Re-Assess</button>
-              </NavLink>
-          </div>
-      </div> 
-
+         
+                 <div className="results__circle">  <ResultCircle percentage={percentages.A} color="#ff6384" label="Reading/Writing" /></div> 
+                 <div className="results__circle">  <ResultCircle percentage={percentages.B} color="#36a2eb" label="Visual" /></div> 
+                 <div className="results__circle">  <ResultCircle percentage={percentages.C} color="#ffcd56" label="Auditory" /></div> 
+                 <div className="results__circle">  <ResultCircle percentage={percentages.D} color="#4bc0c0" label="Kinesthetic" /></div> 
+                    <NavLink to="/assessment" ><button className="nav__up-button">Re-Assess</button></NavLink>
+         </div>
 
 
   

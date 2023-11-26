@@ -6,201 +6,130 @@
     box-sizing: border-box;
 }
 
-
-.nav{
-
+.nav {
     display: flex;
     justify-content: center;
     background-color: $cream;
- 
+    align-items: center;
 
     &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px;
 
-    width: 100%;
+        .nav__logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
+            @include tablet {
+                flex-direction: row;
+            }
+
+            .nav__flame {
+                display: block;
+                height: 50px; // Adjust as needed
+                margin-right: 10px;
+
+                @include tablet {
+                    height: 50px;
+                    
+                }
+            }
+
+            .nav__logo {
+                height: 40px; // Adjust as needed
+               line-height: 40px;
+                @include tablet {
+                    height: 40px;
+                }
+            }
+        }
+
+        .nav__hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+
+            @include tablet {
+                display: none;
+            }
+
+            span {
+                display: block;
+                height: 3px;
+                background-color: black; // Color of the hamburger lines
+                border-radius: 3px;
+            }
+        }
+
+        .nav__items {
+            display: none;
+
+            &.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 12%;
+                // right: 55;
+                background-color: $cream;
+                width: 50%;
+                padding: 10px;
+                margin-left:45.5vw;
+                border-radius: 10px;
+                
+                
+            }
+
+            @include tablet {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .nav__link {
+                    margin-right: 20px; 
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav__items {
+    display: none;
+    
+    &.open {
+        display: block; // Or flex, depending on your layout
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: $cream;
+        // Additional styling for the open menu
+    }
 
     @include tablet {
         display: flex;
-        justify-content: flex-start;
-        width:auto;
-        
-    }
-
-    @include desktop {
-        display: flex;
-    }
-
-    @include bigdesktop {
-        display: flex;
-    }
-
-}
-
-    &__box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       
-        height: 4.5rem;
-        width: 100%;
-
-        @include tablet {
-            height: 80px;
-            width: 200px;
-          
-        }
-
-     
-    }
-
-    &__logo {
-        text-decoration: none;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 1.6rem;
-        font-weight: 100;
-        
-        width: 170px;
-
-        @include tablet {
-            margin-left: 2rem;
-            margin-top: 0.5rem;
-
-        }
-        
-    }
-
-    &__list {
-        display: flex;
         flex-direction: row;
-        justify-content: center;
-        padding-left: 2rem;
-        height: 2.5rem;
+        align-items: center;
+        // Styles for tablet and larger screens
+    }
 
+    .nav__link {
+        // Style your navigation links
         @include tablet {
-            margin-left: 5vw;
-            padding-left: 0.5rem;
-
+            margin-right: 20px;
         }
     }
-
-    &__item {
-        height: 40px;
-        width: 50%;
-        margin-right: 2rem;
-
-        @include tablet {
-            height: 80px;
-            width: 80px;
-            line-height: 80px;
-            flex-direction: row;
-        }
-
-
-        &--search {
-            height: 2rem;
-            line-height: 2rem;
-
-            @include tablet {
-                padding-top: 1.6rem;
-                margin-right: 0.5rem;
-
-            }
-        }
-
-        &--upload {
-            height: 2rem;
-
-            @include tablet {
-                width: 50%;
-            }
-        }
-    }
-
-    &__block {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-        margin-bottom: 1rem;
-
-        @include tablet {
-
-        }
-
-
-        &__--1{
-            @include tablet {
-                justify-content:flex-start;
-               
-            }
-        }
-
-    }
-
-
-
-    &__link {
-        text-decoration: none;
-    }
-
-
-    &__img {
-        height: 40px;
-        width:42px;
-        border-radius: 50%;
-        border: 2px solid orange;
-
-        &--1 {
-
-            @include tablet {
-                display:none;
-            }
-
-        }
-
-        &--2 {
-            display:none;
-           
-
-             @include tablet {
-                display: flex;
-                margin-top: 1.5rem;
-                margin-right: 2rem;
-             }
-            
-        }
-    }
-
-&__input {
-    width: 105%;
 }
-
-
-
-&__up-button {
-    background-color: #fdcb0b;
-    border: none;
-    color: rgb(222, 94, 9);
-    padding: 7px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 3px;
-    font-size: 0.5rem;
-    width:100%;
-  
-     @include tablet {
-      min-width: 110px;
-    
-     }
-     
-  }
-
-    
-}
-
-
-    
 

@@ -1,12 +1,21 @@
-
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
 
 .result-circle {
     text-align: center;
-    margin: 0 10px;
+    margin: 10px;
 
     .circular-chart {
-        width: 100px;
-        height: 100px;
+        width: 30px; 
+        height: 30px;
+
+        @include tablet {
+            width: 70px; 
+            height: 70px;
+        }
+
+     
 
         .circle-bg {
             fill: none;
@@ -32,6 +41,13 @@
 
     .circle-label {
         margin-top: 5px;
-        font-size: 14px;
+        font-size: 14px; 
     }
+}
+
+
+
+svg {
+
+    height: 10px;
 }

@@ -1,71 +1,63 @@
 import "./MainNav.scss";
 import Logo from "../../assets/Logo/Ignition-Logo.png"
-import Avatar from "../../assets/Images/Avatar1.png"
+import LogoFlame from "../../assets/Logo/IgniteFlame.png"
+
+
+import React, { useState, useEffect } from 'react';
 
 
 import {NavLink} from "react-router-dom";
 
-function MainNav (){
+function MainNav() {
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+    const toggleNav = () => {
+        setIsNavOpen(!isNavOpen);
+    };
 
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768) { 
+                setIsNavOpen(false);
+            }
+        };
 
-      return <div className="nav"> 
-        
- <nav className="nav__wrapper">
-
-      <div className="nav__box">
-        <NavLink to="/home" className="nav__logo-link">
-                <img
-                    className="nav__logo"
-                    src={Logo}
-                    alt="logo"
-                />
-        </NavLink>
-         
-      </div>
+   
+        window.addEventListener('resize', handleResize);
 
        
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
-      <div className="nav__block  nav__block--1">
-           <div className="nav__item nav__item--upload">
-              <NavLink to="/home" >
-                  <button className="nav__up-button">Home</button>
-              </NavLink>
-          </div>
-      </div> 
+    return (
+        <div className="nav">
+            <nav className="nav__wrapper">
+               
+                <div className="nav__logo-container">
+                <NavLink to="/home" className="mainNav__LogoLink">
+                    <img className="nav__flame" src={LogoFlame} alt="Flame Logo" />  </NavLink>
+                    <NavLink to="/home" className="mainNav__LogoLink">  <img className="nav__logo" src={Logo} alt="Main Logo" /></NavLink>
+                   
+                </div>
 
-      <div className="nav__block">
-           <div className="nav__item nav__item--upload">
-              <NavLink to="/assessment" >
-                  <button className="nav__up-button">Assessment</button>
-              </NavLink>
-          </div>
-      </div>    
+                
+                <div className="nav__hamburger" onClick={toggleNav}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
-        <div className="nav__block">
-           <div className="nav__item nav__item--upload">
-              <NavLink to="/player" >
-                  <button className="nav__up-button">Content</button>
-              </NavLink>
-          </div>
-      </div>       
-
-          
-      <div className="nav__block">
-           <div className="nav__item nav__item--upload">
-              <NavLink to="/upload" >
-                  <button className="nav__up-button">Upload Course</button>
-              </NavLink>
-          </div>
-
-        
-      </div>
-
-  
-  </nav>
-
- </div>
-
+                
+                <div className={`nav__items ${isNavOpen ? 'open' : ''}`}>
+                    <NavLink to="/home" className="nav__link">Home</NavLink>
+                    <NavLink to="/assessment" className="nav__link">Assessment</NavLink>
+                    <NavLink to="/player" className="nav__link">Content</NavLink>
+                    <NavLink to="/upload" className="nav__link">Upload Course</NavLink>
+                </div>
+            </nav>
+        </div>
+    );
 }
 
 export default MainNav;
