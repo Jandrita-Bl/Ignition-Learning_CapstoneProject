@@ -8,7 +8,14 @@ function HomePageJSX() {
         <div className="home">
             <MainNav />
 
-            <div className="home__hero"></div>
+            <div className="home__hero">
+                <div className="home__overlay">
+                    <div className="home__content">
+
+                    </div>
+                    
+                </div>
+            </div>
 
             <div className="home__types"> Sliding Text </div>
 

@@ -35,9 +35,12 @@ function MainNav() {
             <nav className="nav__wrapper">
                
                 <div className="nav__logo-container">
-                <NavLink to="/home" className="mainNav__LogoLink">
-                    <img className="nav__flame" src={LogoFlame} alt="Flame Logo" />  </NavLink>
-                    <NavLink to="/home" className="mainNav__LogoLink">  <img className="nav__logo" src={Logo} alt="Main Logo" /></NavLink>
+                      <NavLink to="/home" className="nav__logolink">
+                            <img className="nav__flame" src={LogoFlame} alt="Flame Logo" />  
+                      </NavLink>
+                      <NavLink to="/home" className="nav__logolink"> 
+                             <img className="nav__logo" src={Logo} alt="Main Logo" />
+                      </NavLink>
                    
                 </div>
 

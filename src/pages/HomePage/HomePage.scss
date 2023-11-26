@@ -7,6 +7,7 @@
 .home {
 
  &__hero{
+    position: relative;
      min-height: 50vh;
      height: 60%;
     
@@ -28,11 +29,24 @@
      @include bigdesktop {
       height: 900px;
      }
+
+
+     .home__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0);
+      animation: darken 5s forwards;
+     }
+
  }
 
  &__types{
 
-   background-color: $yellow;
+   background-color: $blue;
+   color: $yellow;
    position: absolute;
    left: -100%;
    top: 66%; 
@@ -53,9 +67,13 @@
    }
  }
 
+}
 
 
-
+@keyframes darken {
+   to {
+       background-color: rgba(0, 0, 0, 0.10);
+   }
 }
 
 @keyframes slideIn {
