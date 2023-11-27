@@ -162,6 +162,23 @@
 
 .home{
 
+   &__text, li {
+      font-size: 1.8vh;
+
+      @include mobile {
+         font-size: 2.2vh;
+      }
+
+      @include tablet {
+         font-size: 2.5vh;
+      }
+
+      @include desktop {
+         font-size: 3vh;
+      }
+
+   }
+
    &__section{
 
       &--1{
@@ -177,8 +194,12 @@
          
 
       &--2 {
-      height: 80vh;
-      background-color:rgb(209, 237, 241);
+      height: 130vh;
+      background-color:#d1e3e2;
+
+         @include mobile {
+            height: 100vh;
+         }
 
          @include tablet {
             height: 70vh;
@@ -189,13 +210,17 @@
 
       &--3 {
          padding-top: 3rem;
-         height: 85vh;
+         height: 130vh;
          background-color:$cream;
    
-            @include mobile {
-               height: 75vh;
-            
-                  }
+         @include mobile {
+            height: 110vh;
+         }
+
+         @include tablet {
+            height: 80vh;
+         }
+
 
 
       }
@@ -226,11 +251,15 @@
 
       // &__text{
 
-      //    // &--1{
+      //    &--3{
+            
 
-      //    // }
+
+      //    }
 
       // }
 
     }
+
+ 
  

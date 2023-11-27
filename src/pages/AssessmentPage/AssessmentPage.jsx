@@ -362,7 +362,7 @@ function AssessmentPageJSX() {
 
                 <button onClick={calculateResults}>Submit</button>
 {showResults && (
-    <button onClick={resetAssessment}>Re-assess</button>
+    <button onClick={resetAssessment}>Retake</button>
 )}
             </div>
         </div>

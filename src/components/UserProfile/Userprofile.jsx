@@ -33,7 +33,7 @@ function UserProfile (){
                  <div className="results__circle">  <ResultCircle percentage={percentages.B} color="#36a2eb" label="Visual" /></div> 
                  <div className="results__circle">  <ResultCircle percentage={percentages.C} color="#ffcd56" label="Auditory" /></div> 
                  <div className="results__circle">  <ResultCircle percentage={percentages.D} color="#4bc0c0" label="Kinesthetic" /></div> 
-                    <NavLink to="/assessment" ><button className="results__assess">Re-Assess</button></NavLink>
+                    <NavLink to="/assessment" ><button className="results__assess">Retake</button></NavLink>
          </div>
 
 

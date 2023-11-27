@@ -42,8 +42,11 @@ function HomePageJSX() {
                 <div className="home__block home__block--3">
                     <h2>The Challenge in Traditional Education </h2>
                     <span className="home__text home__text--3">Traditional education often adopts a one-size-fits-all approach, overlooking the unique learning needs of each student. This mismatch can lead to reduced engagement, lower retention rates, and a feeling of disconnect for many learners. Our platform seeks to bridge this gap by providing a personalized learning experience.</span>
+                    <br />
+                    <br /> 
+                    <br />
                     <h2>Our Solution: A Customized Learning Journey </h2>
-                    <span className="home__text home__text--3">Here’s how [Your Website Name] changes the game:</span>
+                    <span className="home__text home__text--4">Here’s how [Your Website Name] changes the game:</span>
                     
                     <ul>
                         <li> <b> - Personalized Learning Style Assessment:</b> When you join us, you’ll start with a comprehensive assessment to identify your dominant learning style.</li>

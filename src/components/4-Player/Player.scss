@@ -16,8 +16,6 @@ li {
 
 
 .selected-video {
-
-background-color: rgb(221, 208, 191);
 padding-top:5rem;
 
  &__outerbox{
@@ -71,10 +69,11 @@ padding-top:5rem;
 
 
 .next-video {
+    
 
     @include desktop {
-         width: 500px;
-         position: absolute;
+        //  width: 500px;
+        
          right: 4%;
          top: 80%;
      }
@@ -82,7 +81,8 @@ padding-top:5rem;
 
 
     &__item {
-         max-width: 500px;
+        //  max-width: 300px;
+         height: 150px;
     }
 
     &__header {
@@ -103,7 +103,7 @@ padding-top:5rem;
     }
 
     &__box {
-        height: auto;
+        height: 100px;
         display: flex;
         margin-bottom: 1rem;
     }
@@ -111,6 +111,7 @@ padding-top:5rem;
     &__container {
         height: 100px;
         width: 200px;
+        
     }
 
     &__txt {

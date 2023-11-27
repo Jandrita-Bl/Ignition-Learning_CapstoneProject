@@ -126,7 +126,7 @@ return  (
                             placeholder="Add a new comment"
                             required
                         ></textarea>
-                        <button className="comments__btn" type="submit">
+                        <button className="comments__button" type="submit">
                             COMMENT
                         </button>
                     </form>
@@ -176,55 +176,53 @@ return  (
             
         
 
-
-
                <section className="next-video">
 
-                         <ul>
-
                          <div className="recipes-page">
-                         <div className="next-video__boxheader">
-                    
-                    <h6 className="next-video__header">NEXT VIDEOS</h6>
-               </div>
-                    <ul>
-                    {selectedVideo.videos?.map((ingredient, index) => {
-                         return <li key={index}>{ingredient}</li>;
-                    })}
-                    </ul>
-                   
-                    <ul>
+                            <div className="next-video__boxheader">
+                                <h6 className="next-video__header">NEXT VIDEOS</h6>
+                            </div>
+            
+                                {selectedVideo.videos?.map((ingredient, index) => {
+                                    return <li key={index}>{ingredient}</li>;
+                                })}
+                         
+
+                            <br />
+                            <br />
+                   <div>
                     {videos
                          .filter((video) => video.id !== selectedVideo.id)
                          .map((video) => {
                          return (
-                         <li key={video.id} className="next-video__item">
+                         <div key={video.id} className="next-video__item">
                               <Link to={`/player/${video.id}`}>
 
-                              <div className="next-video__box">
-                         <img
-                         className="next-video__IMG"
-                        //  src= {video.image}
-                        //  alt={video.title}
-                        src={`http://localhost:8080/${video.image}`} // need to append the image file name with our server URL
-            alt={video.title}
-                         />
+                                    <div className="next-video__box">
+                                <img
+                                className="next-video__IMG"
+                            
+                                src={`http://localhost:8080/${video.image}`}
+                    alt={video.title}
+                                />
+                                <img className="next-video__info"   src={`http://localhost:8080/${video.styleinfo}`}
+                    alt={video.title} />
 
-                         <div className="next-video__container">
-                         <h6 className="next-video__subheader">{video.title}</h6>
-                         <p className="next-video__txt">{video.channel}</p>
-                         </div>
-                         </div>
+                                <div className="next-video__container">
+                                <h6 className="next-video__subheader">{video.title}</h6>
+                                <p className="next-video__txt">{video.channel}</p>
+                                </div>
+                                </div>
 
-                              </Link>
-                         </li>
+                                    </Link>
+                         </div>
                          );
                          })}
-                    </ul>
-    
+                    
+                    </div>
                     </div>
 
-                    </ul>
+                   
 
                    </section>
 
