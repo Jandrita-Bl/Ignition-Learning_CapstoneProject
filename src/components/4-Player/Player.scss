@@ -12,6 +12,15 @@
 li {
     text-decoration: none;
     list-style-type: none;
+    font-size: 0.8rem;
+}
+
+span, p {
+    font-size: 0.7rem;
+
+    @include tablet {
+        font-size: 0.9rem;
+    }
 }
 
 .UploadHP__Box1 {
@@ -34,17 +43,40 @@ li {
 }
 
 .selected-video {
-padding-top:5rem;
+padding-top:2rem;
+background-color: rgb(235, 243, 244);
+
+&__h2{
+    margin-bottom: 2rem;
+    color: $blue;
+    font-size: 2rem;
+}
+
+ &__upper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
 
  &__outerbox{
     
-    margin-left: 10%;
+    margin: 1rem;
+    width:100%;
+    max-width: 800px;
+    border-style: solid;
+    border-color: $blue;
+    border-width: 2px;
+    border-radius: 30px;
+
+    @include tablet {
+        margin-left: 2rem;
+    }
     
  }
 
 
     &__Section--2 {
-        width: 80%;
+        width: 100%;
 
     }
 
@@ -86,6 +118,9 @@ padding-top:5rem;
 }
 
 
+
+
+
 .next-video {
     
 
@@ -100,12 +135,18 @@ padding-top:5rem;
 
     &__item {
         //  max-width: 300px;
-         height: 150px;
+         height: 7rem;
+         flex-wrap: wrap;
+    }
+
+    &__boxheader{
+        padding-top: 2rem;
+        padding-bottom: 1rem;
     }
 
     &__header {
         margin: 0.6rem;
-        padding-left:2rem;
+        color: $blue;
     }
 
     &__subheader {
@@ -127,26 +168,44 @@ padding-top:5rem;
     }
 
     &__container {
+        padding-top: 1rem;
         height: 100px;
-        width: 200px;
+        width: 150px;
+        background-color: rgb(236, 249, 255);
+          
 
     }
 
     &__txt {
         margin: 0px;
-        font-size: 0.8rem;
         margin-left: 0.5rem;
+        font-size: 1vh;
+
+        @include tablet {
+            font-size: 1.3vh;
+        }
+        
     }
 }
 
 
 
-.comments {
+// .comments {
 
-&__avatarIMG {
-    height: 30px;
-    width:32px;
-    border-radius: 50%;
-}
+    // width: 100%;
+    // &__divform {
+    //     width: 100%; 
+    //     max-width: 200px;  
+    //     padding: 1rem; 
 
-}
+    //     @include tablet {
+    //         width: 80%; 
+    //         margin: auto; 
+    //     }
+    // }
+
+//    &__cts-box {
+//     width: 100%;
+//    }
+    
+// }

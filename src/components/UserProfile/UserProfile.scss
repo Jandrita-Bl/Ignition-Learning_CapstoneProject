@@ -2,6 +2,35 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
+
+h4 {
+     margin: 0;
+     color: $blue;
+}
+
+.results{
+     background-color: rgb(224, 238, 243);
+
+     &__box1{ 
+          padding-top: 1rem;
+     }
+
+     &__box2 {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+     }
+
+     &__img{
+          height: 50px;
+          width: 54px;
+          border-radius: 50%;
+          border-style: solid;
+          border-color: $blue;
+          border-width: 4px;
+          margin-bottom: 1rem;
+     }
+}
+
 .results__container{
      display: flex;
      flex-direction: center;

@@ -99,7 +99,7 @@ function AssessmentPageJSX() {
 
                 {/* Question 1 */}
                 <div className="question">
-                    <p>1. When learning something new, I prefer:</p>
+                    <p className="text">1. When learning something new, I prefer:</p>
                     <div className="options">
                         <label>
                             <input

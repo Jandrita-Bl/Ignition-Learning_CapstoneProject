@@ -71,8 +71,8 @@ return (
                <div className="UploadHP__Box1">
 
                          <span className="UploadHP__Title">
-                              CREATE YOUR OWN COURSE <br />
-                              & UPLOAD IT HERE!
+                              Create Your Own Course <br />
+                              & Upload it Here!
                          </span>
 
                </div>
