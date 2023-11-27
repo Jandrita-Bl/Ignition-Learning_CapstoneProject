@@ -71,7 +71,8 @@ return (
                <div className="UploadHP__Box1">
 
                          <span className="UploadHP__Title">
-                              Upload Video
+                              CREATE YOUR OWN COURSE <br />
+                              & UPLOAD IT HERE!
                          </span>
 
                </div>
@@ -80,9 +81,9 @@ return (
 
                <div className="UploadHP__Thumbnail">
 
-                    <h6 className="Upload__Title2"> VIDEO THUMBNAIL</h6>
+                    <h6 className="Upload__Title2"> ADD YOUR MEDIA HERE</h6>
 
-                    <img className="UploadHP__Video" src={"ThumbnailIMG"} alt="Upload" />
+                    <div className="graybox"></div>
 
                </div>
 
@@ -93,38 +94,63 @@ return (
                <form className="comments__form" onSubmit={handleSubmit}>
 
                     <h6 className="comments__Title2">
-                         TITLE YOUR VIDEO
+                         TITLE OF YOUR COURSE
                     </h6>
 
                     <textarea
                     className="comments__textarea"
                     name="VideoTitle"
                     type="text"
-                    placeholder="Add a title to your video"
+                    placeholder="Type the title to your course here"
                     required
                     ></textarea>
 
-                    <br />
+                    <h6 className="comments__Title2">
+                         TYPE OF STYLE
+                    </h6>
+
+                    <label>
+                            <input
+                                type="radio"
+                                name="K"
+                            /> Kinesthesic
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="A"
+                            />Auditive
+                        </label> <label>
+                            <input
+                                type="radio"
+                                name="V"
+                            /> Visual
+                        </label> <label>
+                            <input
+                                type="radio"
+                                name="RW"
+                            /> Read / Write
+                        </label>
 
                     <h6 className="comments__Title2">
-                    ADD A VIDEO DESCRIPTION
+                    ADD A DESCRIPTION OF YOUR COURSE
                     </h6>
 
                     <textarea
                     className="comments__textarea comments__textarea-desc"
                     name="VideoDescription"
                     type="text"
-                    placeholder="Add a description to your video"
+                    placeholder="Type the description to your course here"
                     required
                     ></textarea>
                     <br />
-                    <button  className="comments__btn">
+                    <button  className="comments__button">
                     PUBLISH
                     </button>
 
                     <br />
                                    
-                    <button className="comments__btn comments__btn-cancel" type="submit">
+                    <button className="comments__button comments__btn-cancel" type="submit">
                     CANCEL
                     </button>
 

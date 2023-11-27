@@ -1,5 +1,6 @@
 import "./Player.scss";
 import axios from "axios";
+import contenttype from "../../assets/Images/contenttypes.png"
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -32,6 +33,10 @@ function Player () {
                const selectedResponse = await axios.get(`http://localhost:8080/videos/${response.data[0].id}`);
 
                setSelectedVideo(selectedResponse.data);
+
+               
+console.log("Selected Video Image URL:", selectedResponse.data.image);  
+
 
    
              } else {
@@ -72,11 +77,18 @@ return  (
 
                 <div className="selected-video__Section selected-video__Section--3">
                     <div className="selected-video__box">
-                        <span className="selected-video__Item">
+                    <span className="selected-video__Item">
+                            
+                     Learning Style: Visual
+                        </span><span className="selected-video__Item">
+                            
+                        Content Delivery: Video
+                        </span>
+                        <span className="selected-video__Item">Teacher:
                             
                             {selectedVideo.channel} 
                         </span>
-                        <span className="selected-video__Item">
+                        <span className="selected-video__Item"> Created:
                             {" "}
                             {new Date(
                                 selectedVideo.timestamp
@@ -84,10 +96,10 @@ return  (
                         </span>
                     </div>
                     <div className="selected-video__box">
-                        <span className="selected-video__Item">
+                        <span className="selected-video__Item"> Students:
                             {selectedVideo.views}{" "}
                         </span>
-                        <span className="selected-video__Item">
+                        <span className="selected-video__Item"> Likes:
                             {selectedVideo.likes}
                         </span>
                     </div>
@@ -112,27 +124,12 @@ return  (
                         />
                     </div>
 
-                    <form className="comments__form">
-                        <h5 className="comments__Title"> # Comments</h5>
-
-                        <h6 className="comments__Title2">
-                            JOIN THE CONVERSATION
-                        </h6>
-
-                        <textarea
-                            className="comments__textarea"
-                            name="boxComment"
-                            type="text"
-                            placeholder="Add a new comment"
-                            required
-                        ></textarea>
-                        <button className="comments__button" type="submit">
-                            COMMENT
-                        </button>
-                    </form>
+               
                 </div>
 
                 <div className="comments__section2">
+                <h5 className="comments__Title"> COMMENTS</h5>
+
                     <div className="comments__userimg2">
                         <img
                             className="comments__avatarIMG"
@@ -172,6 +169,24 @@ return  (
                         ))}
                     </ul>
                 </div>
+
+                <form className="comments__form">
+
+<h6 className="comments__Title2">
+    Let us know what you think of the content!
+</h6>
+
+<textarea
+    className="comments__textarea"
+    name="boxComment"
+    type="text"
+    placeholder="Add a new comment"
+    required
+></textarea>
+<button className="comments__button" type="submit">
+    COMMENT
+</button>
+</form>
             </section>
             
         
@@ -180,7 +195,7 @@ return  (
 
                          <div className="recipes-page">
                             <div className="next-video__boxheader">
-                                <h6 className="next-video__header">NEXT VIDEOS</h6>
+                                <h6 className="next-video__header">COURSES SELECTION</h6>
                             </div>
             
                                 {selectedVideo.videos?.map((ingredient, index) => {
@@ -205,12 +220,13 @@ return  (
                                 src={`http://localhost:8080/${video.image}`}
                     alt={video.title}
                                 />
-                                <img className="next-video__info"   src={`http://localhost:8080/${video.styleinfo}`}
+                                <img className="next-video__info"   src={contenttype}
                     alt={video.title} />
 
                                 <div className="next-video__container">
                                 <h6 className="next-video__subheader">{video.title}</h6>
-                                <p className="next-video__txt">{video.channel}</p>
+                                <p className="next-video__txt"> Learning Style: Visual</p>
+                                <p className="next-video__txt">Content Delivery: Video</p>
                                 </div>
                                 </div>
 
