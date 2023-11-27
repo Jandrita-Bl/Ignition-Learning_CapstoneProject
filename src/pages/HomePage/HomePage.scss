@@ -8,10 +8,10 @@
 
  &__hero{
     position: relative;
-     min-height: 50vh;
+     min-height: 60vh;
      height: 60%;
     
-     background-image: url("../../assets/Images/IgniteHeroImage.png") ;
+     background-image: url("../../assets/Images/HeroImage3.png") ;
      background-color: $cream; 
      background-position: center; 
      background-repeat: no-repeat; 
@@ -30,6 +30,11 @@
       height: 900px;
      }
 
+    
+
+
+
+     
 
      .home__overlay {
       position: absolute;
@@ -43,28 +48,76 @@
 
  }
 
- &__types{
+ &__title{
 
+   &--1{
+   width:100%;
    background-color: $blue;
    color: $yellow;
    position: absolute;
    left: -100%;
-   top: 66%; 
-   transform: translateY(-50%);
+   top: 55.5vh; 
+   transform: translateY(80%);
    padding: 10px;
    border-radius: 5px;
    animation: slideIn 3s forwards; 
 
+   font-size: 1.5rem;
+
+   @include mobile {
+      top: 49vh; 
+      width:100%;
+   }
+
    @include tablet {
-      top: 680px; 
+      top: 560px; 
+      width:80%;
+   }
 
    }
 
 
    @include desktop {
-      top: 1000px; 
+      top: 850px; 
+      width:80%;
 
    }
+
+//    &--3{
+//       width:100%;
+//       background-color: $blue;
+//       color: $yellow;
+//       position: absolute;
+//       left: -100%;
+//       top: 200vh; 
+//       transform: translateY(80%);
+//       padding: 10px;
+//       border-radius: 5px;
+//       animation: slideIn 3s forwards; 
+   
+//       font-size: 1.5rem;
+   
+//       @include mobile {
+//          top: 70vh; 
+//          width:100%;
+//       }
+   
+//       @include tablet {
+//          top: 560px; 
+//          width:80%;
+//       }
+   
+//       }
+   
+   
+//       @include desktop {
+//          top: 850px; 
+//          width:80%;
+   
+//       }
+
+
+
  }
 
 }
@@ -72,21 +125,29 @@
 
 @keyframes darken {
    to {
-       background-color: rgba(0, 0, 0, 0.10);
+       background-color: rgba(0, 0, 0, 0.30);
    }
 }
 
 @keyframes slideIn {
    to {
-       left:65%;
+       left:00%;
    
       }
+}
+
+@include mobile {
+   @keyframes slideIn{
+      to {
+         left: 00%;
+      }
+   }
 }
 
 @include tablet {
    @keyframes slideIn{
       to {
-         left:80%;
+         left: 20%;
       }
    }
 }
@@ -94,7 +155,82 @@
 @include desktop {
    @keyframes slideIn{
       to {
-         left:88.5%;
+         left: 20%; 
       }
    }
 }
+
+.home{
+
+   &__section{
+
+      &--1{
+      height: 85vh;
+      background-color:$cream;
+
+         @include mobile {
+            height: 60vh;
+            
+         
+               }
+       }
+         
+
+      &--2 {
+      height: 80vh;
+      background-color:rgb(209, 237, 241);
+
+         @include tablet {
+            height: 70vh;
+         }
+
+        }
+
+
+      &--3 {
+         padding-top: 3rem;
+         height: 85vh;
+         background-color:$cream;
+   
+            @include mobile {
+               height: 75vh;
+            
+                  }
+
+
+      }
+
+
+      }
+   &__block {
+
+       &--1 {
+        padding-top: 19rem;
+      //   height: 100%;
+
+            @include mobile {
+            padding-top: 12rem;
+            width: 90%;
+            padding-left: 2rem;
+            }
+
+            }
+
+      &--2{
+         padding: 2rem;
+         padding-top: 3rem;
+      }
+
+
+       }
+
+      // &__text{
+
+      //    // &--1{
+
+      //    // }
+
+      // }
+
+    }
+ 

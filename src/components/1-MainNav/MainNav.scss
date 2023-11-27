@@ -14,130 +14,139 @@
 
     &__wrapper {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         width: 100%;
         padding: 10px;
+        height: 10.5rem;
+        
 
-        .nav__logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
-            @include mobile {
-                flex-direction: row;
-            }
-
-            @include tablet {
-                flex-direction: row;
-            }
-
-            .nav__flame {
-                display: block;
-                height: 50px; 
-                margin-right: 10px;
-
-                @include tablet {
-                    height: 50px;
-                    
-                }
-            }
-
-            .nav__logo {
-                height: 40px; 
-               line-height: 40px;
-                @include tablet {
-                    height: 40px;
-                }
-            }
+        @include mobile {
+            height: 4.2rem;
         }
+        
 
-        .nav__hamburger {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 30px;
-            height: 25px;
-            cursor: pointer;
-
-            @include tablet {
-                display: none;
-            }
-
-            span {
-                display: block;
-                height: 3px;
-                background-color: $blue; 
-                border-radius: 3px;
-            }
+        span {
+            display: block;
+            height: 3px;
+            background-color: $blue;
+            border-radius: 3px;
         }
+    }
+}
 
-        .nav__items {
-            display: none;
 
-            &.open {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 12%;
-                // right: 55;
-                background-color: $cream;
-                width: 50%;
-                padding: 10px;
-                margin-left:45.5vw;
-                border-radius: 10px;
-                z-index:1000;
+.nav__logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // height: 6rem;
 
-                // TODO FIX HEIGHT OF MENU AND BARS LOGO HEIGHT NAV BAR ETC
-                
-                
-            }
+    @include mobile {
+        flex-direction: row;
+    }
 
-            @include tablet {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
+    @include tablet {
+        flex-direction: row;
+    }
+}
 
-                .nav__link {
-                    margin-right: 20px; 
-                    text-decoration: none;
-                    color: black;
+.nav__logolink {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    
+}
 
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-        }
+.nav__logo {
+    height: 40px;
+   
+   
+    @include tablet {
+        height: 40px;
+    }
+}
+
+
+.nav__flame {
+    display: block;
+    height: 50px;
+    margin-right: 10px;
+
+    @include tablet {
+        height: 50px;
+    }
+}
+
+.nav__hamburger {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    // margin: 1rem;
+    margin-left:5.5rem;
+    margin-right: 3.2rem;
+
+    @include mobile {
+    margin:1rem;
+    margin-bottom: 1rem;
+
+    }
+
+
+    @include tablet {
+        display: none;
     }
 }
 
 .nav__items {
     display: none;
-    
+
     &.open {
-        display: block; 
+        display: flex;
+        flex-direction: column;
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        top: 23%;
+        right: 25%;
         background-color: $cream;
-        
+        width: 50%;
+        padding: 10px;
+        // margin-left:45.5vw;
+        border-radius: 10px;
+        z-index: 1000;
+
+        // TODO FIX HEIGHT OF MENU AND BARS LOGO HEIGHT NAV BAR ETC
+
+        @include mobile {
+            top: 10%;
+            right: 4%;
+        }
+
     }
 
-    @include mobile {
+    @include tablet {
         display: flex;
         flex-direction: row;
         align-items: center;
-        
-    }
 
-    .nav__link {
-        
-        @include tablet {
-            margin-right: 20px;
-        }
     }
 }
+
+
+.nav__link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        text-decoration: wavy;
+    }
+}
+
+
 

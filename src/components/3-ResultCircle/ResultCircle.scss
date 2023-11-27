@@ -3,16 +3,22 @@
 @use "../../styles/partials/typography" as *;
 
 .result-circle {
+    display:flex;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     margin: 10px;
 
     .circular-chart {
-        width: 30px; 
-        height: 30px;
+        
+        width: 40px; 
+        height: 40px;
 
         @include tablet {
             width: 70px; 
             height: 70px;
+            
         }
 
      

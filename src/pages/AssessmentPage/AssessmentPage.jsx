@@ -84,14 +84,14 @@ function AssessmentPageJSX() {
     };
 
     return (
-        <div className="assessment-page">
+        <div className="assessment__page">
             <MainNav />
-            <div className="assessment-container">
-                <h2>Learning Style Assessment</h2>
+            <div className="assessment__container">
+                <h2 className="assessmen__headert">Learning Style Assessment</h2>
 
 
-                <div className="results-container">
-                    <ResultCircle percentage={percentages.A} color="#ff6384" label="Reading/Writing" />
+                <div className="results__container">
+                    <ResultCircle percentage={percentages.A} color="#ff6384" label="Read/Write" />
                     <ResultCircle percentage={percentages.B} color="#36a2eb" label="Visual" />
                     <ResultCircle percentage={percentages.C} color="#ffcd56" label="Auditory" />
                     <ResultCircle percentage={percentages.D} color="#4bc0c0" label="Kinesthetic" />
