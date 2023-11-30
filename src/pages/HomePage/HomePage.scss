@@ -2,264 +2,434 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-
-
 .home {
+    &__hero {
+        position: relative;
+        min-height: 60vh;
+        height: 60%;
 
- &__hero{
-    position: relative;
-     min-height: 60vh;
-     height: 60%;
+        background-image: url("../../assets/Images/HeroImage3.png");
+        background-color: $cream;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+
+        @include tablet {
+            height: 570px;
+        }
+
+        @include desktop {
+            height: 30vh;
+        }
+
+        @include bigdesktop {
+            height: 30vh;
+        }
+    }
+
+    &__content {
+      // display: flex;
+      // justify-content: center;
     
-     background-image: url("../../assets/Images/HeroImage3.png") ;
-     background-color: $cream; 
-     background-position: center; 
-     background-repeat: no-repeat; 
-     background-size: cover; 
-
-     @include tablet {
-        height: 570px;
-     }
-
-
-     @include desktop {
-        height: 850px;
-     }
-
-     @include bigdesktop {
-      height: 900px;
-     }
-
+      
+    }
     
+    
+    &__content1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        background-color: rgb(109, 169, 181);
+        opacity: 95%;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      
+
+        @include desktop {
+        margin-top: 9rem;}
+        
+        
+    }
+
+    &__sub1 {
+      font-size: 2rem;
+      margin: 0.8rem;
+      color: rgb(251, 230, 49);
+      font-weight: 700;
+      
+      
+    }
 
 
-
-     
-
-     .home__overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0);
-      animation: darken 5s forwards;
-     }
-
- }
-
- &__title{
-
-   &--1{
-   width:100%;
-   background-color: $blue;
-   color: $yellow;
-   position: absolute;
-   left: -100%;
-   top: 55.5vh; 
-   transform: translateY(80%);
-   padding: 10px;
-   border-radius: 5px;
-   animation: slideIn 3s forwards; 
-
-   font-size: 1.5rem;
-
-   @include mobile {
-      top: 49vh; 
-      width:100%;
-   }
-
-   @include tablet {
-      top: 560px; 
-      width:80%;
-   }
-
-   }
-
-
-   @include desktop {
-      top: 850px; 
-      width:80%;
-
-   }
-
-//    &--3{
-//       width:100%;
-//       background-color: $blue;
-//       color: $yellow;
-//       position: absolute;
-//       left: -100%;
-//       top: 200vh; 
-//       transform: translateY(80%);
-//       padding: 10px;
-//       border-radius: 5px;
-//       animation: slideIn 3s forwards; 
-   
-//       font-size: 1.5rem;
-   
-//       @include mobile {
-//          top: 70vh; 
-//          width:100%;
-//       }
-   
-//       @include tablet {
-//          top: 560px; 
-//          width:80%;
-//       }
-   
-//       }
-   
-   
-//       @include desktop {
-//          top: 850px; 
-//          width:80%;
-   
-//       }
-
-
-
- }
-
-}
-
-
-@keyframes darken {
-   to {
-       background-color: rgba(0, 0, 0, 0.30);
-   }
-}
-
-@keyframes slideIn {
-   to {
-       left:00%;
-   
-      }
-}
-
-@include mobile {
-   @keyframes slideIn{
-      to {
-         left: 00%;
-      }
-   }
-}
-
-@include tablet {
-   @keyframes slideIn{
-      to {
-         left: 20%;
-      }
-   }
-}
-
-@include desktop {
-   @keyframes slideIn{
-      to {
-         left: 20%; 
-      }
-   }
-}
-
-.home{
-
-   &__text, li {
-      font-size: 1.8vh;
-
-      @include mobile {
-         font-size: 2.2vh;
-      }
+    &__content2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem;
+      margin: 0.8rem;
+      flex-direction: column;
+      
 
       @include tablet {
-         font-size: 2.5vh;
+
+         flex-direction: row;
+         margin-top: 27vh;
       }
 
       @include desktop {
-         font-size: 3vh;
+         height:15vh;
+         margin-top:8rem;
+
       }
 
-   }
 
-   &__section{
+      @include bigdesktop {
+        
+         height: 16vh;
+         margin-top: 2rem;
+      }
+      
+    }
+    &__painter {
+      width: 80%;
+      height: 80%;
+     }
 
-      &--1{
-      height: 85vh;
-      background-color:$cream;
+    &__sub2 {
 
-         @include mobile {
-            height: 60vh;
-            
-         
-               }
-       }
-         
+      background-color:  rgb(46, 46, 93);
+      min-width: 160px;
+      padding: 0.3rem;
+      margin: 1rem;
+      margin-bottom: 0.2rem;
+      box-shadow: 0 10px 10px 0 rgba(10, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      
+      border-radius: 10px;
+      color: rgb(235, 194, 93);
 
-      &--2 {
-      height: 130vh;
-      background-color:#d1e3e2;
+      @include mobile {
+         margin-top: 0.3rem;
+      }
 
-         @include mobile {
-            height: 100vh;
-         }
+      @include tablet {
+         margin: 4rem;
+         margin-top: 2.0rem;
+         margin-bottom: 0.2rem;
+      }
 
-         @include tablet {
-            height: 70vh;
-         }
+      @include desktop {
+         margin:8rem;
+         margin-top: 1rem;
+         margin-bottom: 0.2rem;
+
+      }
+
+      @include bigdesktop {
+         margin: 10rem;
+         margin-bottom: 0.2rem;
+
+      }
+      
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0);
+        animation: darken 5s forwards;
+    }
+
+    &__title {
+        &--1 {
+            width: 100%;
+            background-color: $blue;
+            color: $yellow;
+            position: absolute;
+            left: -100%;
+            top: 52vh;
+            transform: translateY(80%);
+            padding: 10px;
+            border-radius: 5px;
+            animation: slideIn 3s forwards;
+            z-index: 3;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            font-size: 1.3rem;
+
+            @include mobile {
+                top: 28rem;
+                width: 100%;
+            }
+
+            @include tablet {
+                top: 33rem;
+                width: 100%;
+            }
+
+
+            @include desktop {
+               top: 33rem;
+                  width: 80%;
+              }
+      
+              @include bigdesktop {
+               top: 61vh;
+               // width: 60%;
+           }
 
         }
 
+        
+    }
 
-      &--3 {
-         padding-top: 3rem;
-         height: 130vh;
-         background-color:$cream;
-   
+  
+}
+
+    //    &--3{
+    //       width:100%;
+    //       background-color: $blue;
+    //       color: $yellow;
+    //       position: absolute;
+    //       left: -100%;
+    //       top: 200vh;
+    //       transform: translateY(80%);
+    //       padding: 10px;
+    //       border-radius: 5px;
+    //       animation: slideIn 3s forwards;
+
+    //       font-size: 1.5rem;
+
+    //       @include mobile {
+    //          top: 70vh;
+    //          width:100%;
+    //       }
+
+    //       @include tablet {
+    //          top: 560px;
+    //          width:80%;
+    //       }
+
+    //       }
+
+    //       @include desktop {
+    //          top: 850px;
+    //          width:80%;
+
+    //       }
+
+    @keyframes darken {
+        to {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    @keyframes slideIn {
+        to {
+            left: 00%;
+        }
+    }
+
+    @include mobile {
+        @keyframes slideIn {
+            to {
+                left: 00%;
+            }
+        }
+    }
+
+    @include tablet {
+        @keyframes slideIn {
+            to {
+                left: 00%;
+            }
+        }
+    }
+
+    @include desktop {
+        @keyframes slideIn {
+            to {
+                left: 20%;
+            }
+        }
+    }
+
+    @include bigdesktop {
+      @keyframes slideIn {
+          to {
+              left: 20%;
+          }
+      }
+  }
+
+    .home {
+        &__text{
+         font-size: min(max(16px, 3vw), 18px);
+         margin-top: 1rem;
+         
+
+        width:80%;}
+        li {
+            font-size: 1.3vh;
+
+            @include mobile {
+                font-size: 1.6vh;
+            }
+
+            @include tablet {
+                font-size: 1.8vh;
+            }
+
+            @include desktop {
+               font-size: 2vh;
+            }
+        }
+
+        &__section {
+            &--1 {
+               //  height: 40vh;
+                background-color: #5fafcb;
+              
+
+                @include mobile {
+                  //   height: 60vh;
+                }
+            }
+
+            &--2 {
+                height: 130vh;
+                background-color: #d1e3e2;
+
+                @include mobile {
+                    height: 50vh;
+                }
+
+                @include tablet {
+                    height: 70vh;
+                }
+            }
+
+            &--3 {
+                padding-top: 3rem;
+                height: 130vh;
+                background-color: $cream;
+
+                @include mobile {
+                    height: 110vh;
+                }
+
+                @include tablet {
+                    height: 80vh;
+                }
+            }
+        }
+        &__block {
+         padding-top: 12rem;
+            &--1 {
+               display: flex;
+               
+               background-color: rgb(139, 207, 207);
+               opacity: 70%;
+               padding:0.7rem;
+                padding-top: 6rem;
+            flex-wrap: wrap;
+           
+
+                @include mobile {
+                    padding-top: 10rem;
+                    width: 90%;
+                    flex-direction: column;
+                     
+                   
+                  
+                }
+
+                @include desktop {
+                padding-top: 13rem;
+                flex-direction: row;
+            
+            }}
+
+            &--2 {
+                padding: 2rem;
+                padding-top: 3rem;
+            }
+        }
+
+     
+
+        &__subblock{
+         align-self: center;
+         background-color: rgb(205, 238, 239) ;
+         border-radius: 10px;
+         width: 70%;
+         height: 32rem;
+         padding: 1rem;
+         margin:1rem;
+         
+         min-width: 200px;
+         max-width: 500px;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+         
+
          @include mobile {
-            height: 110vh;
+            margin-left: 2rem;
+            margin-bottom: 5%;
+            min-width: 300px;
+   
          }
 
          @include tablet {
-            height: 80vh;
+            min-width: 200px;
+            max-width: 450px;
+
+            min-height: 200px;
+            max-height: 450px;
+
          }
+      
+         
+        }
+
+        &__subblock1{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         
+
+         @include tablet {
+         margin-left: 4rem;}
+         
+        }
 
 
 
-      }
+        &__subblock2 {
 
+         @include mobile {
+            padding-top: 2rem;}
 
-      }
-   &__block {
-
-       &--1 {
-        padding-top: 19rem;
-      //   height: 100%;
-
-            @include mobile {
-            padding-top: 12rem;
-            width: 90%;
-            padding-left: 2rem;
-            }
-
-            }
-
-      &--2{
-         padding: 2rem;
-         padding-top: 3rem;
-      }
-
-
-       }
-
-      // &__text{
-
-      //    &--3{
+         @include tablet {
+            padding-top: 1rem;}
             
+           }
+
+        }
+        // &__text{
+
+        //    &--3{
+
+        //    }
+
+        // }
+    
 
 
-      //    }
-
-      // }
-
-    }
-
- 
- 
+     

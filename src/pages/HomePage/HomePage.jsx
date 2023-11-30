@@ -1,4 +1,7 @@
 import "./HomePage.scss";
+import Painter from "../../assets/Images/Painter.png"
+import Girl from "../../assets/Images/Girl.png"
+
 
 import MainNav from "../../components/1-MainNav/MainNav";
 
@@ -11,6 +14,18 @@ function HomePageJSX() {
             <div className="home__hero">
                 <div className="home__overlay">
                     <div className="home__content">
+                        <div className="home__content1">
+                            <p className="home__sub1">  <b>Learning Styles... 
+                                <br /> Truth or Myth? </b>
+                            </p>
+                        </div>
+
+                        <div  className="home__content2">
+                            <p  className="home__sub2 home__kin">Kinesthetic</p>
+                            <p  className="home__sub2 home__aud">Auditive</p>
+                            <p  className="home__sub2 home__visual">Visual</p>
+                        </div>
+
 
                     </div>
                     
@@ -19,42 +34,41 @@ function HomePageJSX() {
             <div className="home__section home__section--1">
 
                     <div className="home__title home__title--1">  
-                          <p> <b>Welcome to Ignition Learning: </b><br />Tailoring Education to Your Unique Learning Style </p>
+                          <p> <b>It really does not matter!  <br />
+                            What matters is that YOU get to decide HOW you want your content delivered!  </b><br /> </p>
                     </div>
+                    
+        
+
                     <div className="home__block home__block--1">
-                         <span className="home__text home__text--1">Unlock the Power of Personalized Learning! In Ignition Learning, where we embrace the diversity of learning styles! Our mission is simple yet profound: to revolutionize education by tailoring it to fit the unique learning needs of each individual. We understand that everyone absorbs and processes information differently, and our platform is designed to honor these differences.</span>
+
+                    <div  className="home__subblock home__subblock1">
+                            <img className="home__painter" src={Girl} alt="" />
+                        </div>
+                       
+                        <div className="home__subblock home__subblock2">
+                         <span className="home__text home__text--1">In Ignition Learning, we offer you a platform with thousands of courses at your fingertips... <br /> <br />
+                         But most important of all, you get to personalize your profile and select the type of media, formats or modality that best fits your needs, wether you beleive in Learning Styles or not...
+                         </span>
+                         <span className="home__text home__text--1"><br /> <br />
+                         Every course you need available here via video, diagrams, audio files, audio books, to name a few... <br /> <br /> We also have classes, events, gatherings, both on-line and in-person, far and near, as we connect with local professionals, instututions, and enthusiasts, that share their resources with us... <br /><br />
+                          We have it all here in one place for you!
+                         </span>
+
+                         </div>
+
+                        
+
+                       
+                         <div  className="home__subblock home__subblock1">
+                            <img className="home__painter" src={Painter} alt="" />
+                        </div>
+                        
                      </div>
             </div>
 
-            <div  className="home__section home__section--2">     
-                  <div className="home__block home__block--2">
-                    <h2>Why Learning Styles Matter </h2>
-                    <span className="home__text home__text--2">At the heart of our approach is a deep appreciation for the various learning styles: kinesthetic, auditory, visual, and reading/writing. Each style has its strengths and challenges, and recognizing this can transform the way you learn. Here’s why understanding and leveraging your learning style is crucial: </span>
-                    <ul>
-                        <li> <b> - Maximizes Learning Efficiency:</b> By aligning educational content with your learning preference, we ensure that you absorb information more effectively and efficiently.</li>
-                        <li> <b> - Boosts Retention and Understanding:</b> When you learn in a way that suits you best, you not only retain information longer but also understand it more deeply.</li>
-                        <li> <b> - Increases Engagement and Motivation:</b>Learning in your preferred style makes the process more enjoyable and engaging, fueling your motivation to learn.</li>
-                    </ul>
-                 </div>
-            </div> 
-
-            <div className="home__section home__section--3">
-                <div className="home__block home__block--3">
-                    <h2>The Challenge in Traditional Education </h2>
-                    <span className="home__text home__text--3">Traditional education often adopts a one-size-fits-all approach, overlooking the unique learning needs of each student. This mismatch can lead to reduced engagement, lower retention rates, and a feeling of disconnect for many learners. Our platform seeks to bridge this gap by providing a personalized learning experience.</span>
-                    <br />
-                    <br /> 
-                    <br />
-                    <h2>Our Solution: A Customized Learning Journey </h2>
-                    <span className="home__text home__text--4">Here’s how [Your Website Name] changes the game:</span>
-                    
-                    <ul>
-                        <li> <b> - Personalized Learning Style Assessment:</b> When you join us, you’ll start with a comprehensive assessment to identify your dominant learning style.</li>
-                        <li> <b> - Curated Content:</b> Based on your assessment results, we provide a rich mix of curated educational resources tailored to your learning style:</li>
-                        <li> <b> - Community and Support: </b>Connect with learners who share your style, exchange ideas, and grow together.</li>
-                    </ul>
-                 </div>
-             </div>
+                 
+        
 
                   
         </div>
