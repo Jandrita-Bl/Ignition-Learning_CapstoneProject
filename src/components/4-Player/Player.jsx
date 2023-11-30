@@ -1,4 +1,5 @@
 import "./Player.scss";
+
 import axios from "axios";
 import contenttype from "../../assets/Images/contenttypes.png"
 import { useState, useEffect } from "react";
@@ -140,14 +141,10 @@ return  (
             <div className="selected-video__outerbox">
                 
             <section className="comments">
-                <div className="comments__section">
-                  
+              
 
-               
-                </div>
-
-                <div className="comments__s">
-                <h5 className="comments__Title"> COMMENTS</h5>
+                
+                <h5 className="comments__Title"> Comments</h5>
 
                   
 
@@ -156,14 +153,14 @@ return  (
                             
                             <div className="comments__item" key={comment.id}> 
                                 <div className="comments__subheader">
-                                    <div className="comments__name">
+                                    
                                         <li
                                             className="comments__name--text"
                                             key={comment.id}
                                         >
                                             {comment.name}
                                         </li>
-                                    </div>
+                                
                                     <div className="comments__date">
                                         <li className="comments__date--text">
                                             {new Date(
@@ -183,7 +180,7 @@ return  (
                     </ul>
 
                     
-                </div>
+             
 
 {/* 
                 <form className="comments__form">
@@ -214,16 +211,18 @@ return  (
             </section>
 
           
-
+            <div className="next-video__boxheader">
+                                <h3 className="next-video__header">MORE COURSES  <br /> <br /> Selected Media: Videos</h3>
+                            </div>
             
         
 
                <section className="next-video">
 
+             
+
                          <div className="next-video__boxh">
-                            <div className="next-video__boxheader">
-                                <h3 className="next-video__header">COURSES SELECTION</h3>
-                            </div>
+                            
             
                                 {selectedVideo.videos?.map((video, index) => {
                                     return <li key={index}>{video}</li>;
@@ -247,8 +246,7 @@ return  (
                                 <p className="next-video__txt">Content Delivery: Video</p>
                                 </div>
 
-                                <img className="next-video__info"   src={contenttype}
-                                                  alt={video.title} />
+                                
                                                 <img
                                                 className="next-video__IMG"
                                             

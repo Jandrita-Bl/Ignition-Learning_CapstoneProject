@@ -1,4 +1,8 @@
 import "./ContentPage.scss";
+import cooking from "../../assets/Images/Cooking.png"
+import note from "../../assets/Images/Note.png"
+import meetup from "../../assets/Images/Meetup.png"
+import diagram from "../../assets/Images/VegDiagram.png"
 import MainNav from "../../components/1-MainNav/MainNav";
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -80,9 +84,12 @@ const ContentPage = () => {
          case 'audio':
            return (
              <div className="media-container">
+               
                <audio controls>
-                 <source src="your-audio.mp3" type="audio/mpeg" />
+                 <source src="your-audio.mp3" type="audio/mpeg" className="media-audio"/>
                </audio>
+               <img className="image" src={note} alt="" />
+               
              </div>
            );
          case 'image':
@@ -94,17 +101,22 @@ const ContentPage = () => {
          case 'list':
            return (
              <div className="list-container">
-               <ul>
-                 <li>Meetup</li>
-                 <li>List Item 2</li>
-                 <li>List Item 3</li>
+                 <ul className="list-meetups">
+                 <li  className="list-meetups"> <img className="img" src={meetup} alt="" /></li>
+                 <li className="list-meetups">Meetups in Vancouver <br/> <br /> December 2024</li>
+                 <li className="list-meetups">Cooking Vegeterian Food with Amy</li>
+                 <li className="list-meetups">Cook the best Christmas Turkey! with Josh</li>
+                 <li className="list-meetups">Workshop: Bake Gluten-Free Chocolate Muffins</li>
+                 <li className="list-meetups">On-Line - Dipping Sauce Class 2</li>
+                 <li></li>
+                 <li></li>
                </ul>
              </div>
            );
          default:
            return (
              <div className="placeholder-container">
-               <p>Select an item to display</p>
+               <img className="placeholder-contimg"src={cooking} alt="" />
              </div>
            );
        }
@@ -114,6 +126,9 @@ const ContentPage = () => {
        <div className="content-page">
             <MainNav />
             
+            <div className="content-wrapper">
+            <div className="content-title">All Content</div>
+            <div className="content-title2">Selected Course: Cooking </div>
          <div className="content-list">
            <ul>
              <li onClick={() => handleItemClick('video')}>Play Video</li>
@@ -136,6 +151,9 @@ const ContentPage = () => {
              )}
            </div>
          </div>
+
+         </div>
+
        </div>
      );
    };

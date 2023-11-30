@@ -56,8 +56,8 @@ function MainNav() {
                     <NavLink to="/home" className="nav__link">Home</NavLink>
                     <NavLink to="/assessment" className="nav__link">Assessment</NavLink>
                     <NavLink to="/content" className="nav__link">All Content</NavLink>
-                    <NavLink to="/player" className="nav__link">Style / Delivery Preference</NavLink>
-                    <NavLink to="/upload" className="nav__link">Upload Media</NavLink>
+                    <NavLink to="/player" className="nav__link">Your Styles</NavLink>
+                    <NavLink to="/upload" className="nav__link">Upload</NavLink>
                 </div>
             </nav>
         </div>

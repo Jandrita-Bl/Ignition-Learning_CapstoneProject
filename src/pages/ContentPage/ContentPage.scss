@@ -2,7 +2,13 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
+html {
+     background-color: rgb(225, 235, 234);
+}
+
 .content-page {
+     background-color: rgb(225, 235, 234);
+     height: 100%;
     
      
    
@@ -32,27 +38,57 @@
        .player {
          position: relative;
          width: 100%;
-         max-width: 600px;
-         min-width: 400px;
+         min-width: 200px;
+         max-width: 1000px;
          border: 1px solid #ccc;
          border-radius: 10px;
          overflow: hidden;
          background-color: #fff;
          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
          transition: box-shadow 0.3s;
+
+
+         @include tablet {
+          min-width: 400px;
+         }
+
+         @include desktop {
+          min-width: 800px;
+         }
    
          &.active {
            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
          }
    
-         .media-container {
-           max-width: 100%;
-           height: auto;
+         .media {
+          
+          &-container {
+           min-width: 200px;
+           height: 50vh;
+
+           @include tablet {
+               min-width: 400px;
+              }
+     
+              @include desktop {
+               min-width: 800px;
+              }
+
+          }
+
+          
+         
          }
    
+     //     audio {
+     //      background-color: #d32f2f;
+     //      color: #0b8688;
+     //      width: 100%;
+     // }
          .list-container ul {
            list-style: none;
            padding: 10px;
+           height: 50vh;
    
            li {
              margin-bottom: 5px;
@@ -63,16 +99,17 @@
            display: flex;
            align-items: center;
            justify-content: center;
-           height: 200px;
+           height: 20vh;
            color: #777;
            font-size: 18px;
+           height: 50vh;
          }
    
          .button-container {
            display: flex;
            justify-content: space-between;
            padding: 10px 20px;
-           background-color: #00d9ff;
+           background-color: $blue;
            color: #fff;
    
            button {
@@ -103,3 +140,41 @@
        }
      }
    }
+
+   .content-wrapper {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     width: 100%;
+     padding-top: 5rem;
+   }
+
+   .content-title {
+color: $blue;
+font-size: 2rem;
+margin-bottom: 3rem;
+
+   }
+
+   .content-title2 {
+     color: $blue;
+     font-size: 1.5rem;
+     margin-bottom: 1rem;
+     
+        }
+
+     .list-meetups {
+          margin: 2rem;
+          font-size: 1.2rem;
+     }
+
+     .image {
+          height: 85%;
+          margin: 1rem;
+     }
+
+     .img {
+          height:60px;
+          margin: 0.5rem;
+     }
