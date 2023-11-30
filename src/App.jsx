@@ -7,6 +7,7 @@ import NotFoundPageJSX from "./pages/NotFound/NotFound";
 import PlayerPageJSX from "./pages/PlayerPage/PlayerPage";
 import AssessmentPageJSX from "./pages/AssessmentPage/AssessmentPage";
 import FormPageJSX from "./pages/FormPage/FormPage";
+import ContentPage from "./pages/ContentPage/ContentPage";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     <Route path="/" element={<HomePageJSX />} />
                     <Route path="/home" element={<HomePageJSX />} />
                     <Route path="/assessment" element={<AssessmentPageJSX />} />
+                    <Route path="/content" element={<ContentPage />} />
                     <Route path="/player" element={<PlayerPageJSX />} />
                     <Route path="/player/:id" element={<PlayerPageJSX />} />
                     <Route path="/upload" element={<FormPageJSX />} />

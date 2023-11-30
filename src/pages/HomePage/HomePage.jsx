@@ -38,7 +38,10 @@ function HomePageJSX() {
                             What matters is that YOU get to decide HOW you want your content delivered!  </b><br /> </p>
                     </div>
                     
-        
+                    <div className="home__button home__button1"> Show me All your Content!</div>
+
+                    <div className="home__button  home__button2"> I want to take the Learning Style Assessment!</div>
+
 
                     <div className="home__block home__block--1">
 

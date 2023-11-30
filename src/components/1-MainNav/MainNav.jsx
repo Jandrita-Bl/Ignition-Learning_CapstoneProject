@@ -55,8 +55,9 @@ function MainNav() {
                 <div className={`nav__items ${isNavOpen ? 'open' : ''}`}>
                     <NavLink to="/home" className="nav__link">Home</NavLink>
                     <NavLink to="/assessment" className="nav__link">Assessment</NavLink>
-                    <NavLink to="/player" className="nav__link">Content</NavLink>
-                    <NavLink to="/upload" className="nav__link">Upload Course</NavLink>
+                    <NavLink to="/content" className="nav__link">All Content</NavLink>
+                    <NavLink to="/player" className="nav__link">Style / Delivery Preference</NavLink>
+                    <NavLink to="/upload" className="nav__link">Upload Media</NavLink>
                 </div>
             </nav>
         </div>
